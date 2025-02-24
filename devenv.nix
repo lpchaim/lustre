@@ -2,7 +2,7 @@
 
 {
   # https://devenv.sh/basics/
-  env.GREET = "devenv";
+  # env.GREET = "devenv";
 
   # https://devenv.sh/languages/
   languages.gleam.enable = true;
@@ -24,10 +24,9 @@
   # '';
 
   # https://devenv.sh/tasks/
-  # tasks = {
-  #   "myproj:setup".exec = "mytool build";
-  #   "devenv:enterShell".after = [ "myproj:setup" ];
-  # };
+  tasks = {
+    "lustre:dev".exec = "gleam run -m lustre/dev start";
+  };
 
   # https://devenv.sh/tests/
   # enterTest = ''
